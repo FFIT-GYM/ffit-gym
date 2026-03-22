@@ -1,4 +1,206 @@
-<!DOCTYPE html>
+<<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FFIT Gym</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Colors & Fonts */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #FAFAFA;
+            color: #333;
+        }
+
+        /* Navbar */
+        .navbar {
+            position: sticky;
+            top: 0;
+            background-color: #3F51B5;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            padding: 15px 0;
+            z-index: 1000;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .navbar a:hover {
+            color: #C0C0C0;
+        }
+
+        /* Sections */
+        .section {
+            padding: 80px 20px;
+        }
+
+        h2 {
+            color: #3F51B5;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        /* Buttons */
+        .button-primary {
+            background: linear-gradient(90deg, #3F51B5, #9C27B0);
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: bold;
+        }
+
+        .button-primary:hover {
+            background: #9C27B0;
+            transform: scale(1.05);
+        }
+
+        /* Cards */
+        .card {
+            border: 1px solid #C0C0C0;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            margin: 20px auto;
+            max-width: 300px;
+            background-color: white;
+        }
+
+        /* Trainer Cards */
+        .trainer-card img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        /* Testimonials */
+        blockquote {
+            font-style: italic;
+            background-color: #FAFAFA;
+            padding: 20px;
+            border-left: 5px solid #9C27B0;
+            max-width: 600px;
+            margin: 20px auto;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                gap: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <a href="#home">Home</a>
+        <a href="#classes">Classes</a>
+        <a href="#membership">Membership</a>
+        <a href="#trainers">Trainers</a>
+        <a href="#booking">Book Now</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="section" style="background: url('gym-hero.jpg') center/cover no-repeat; color: white; text-align: center;">
+        <h1 style="font-size: 48px;">Welcome to FFIT Gym</h1>
+        <p style="font-size: 20px;">Your journey to fitness, strength & wellness starts here</p>
+        <button class="button-primary">Join Today</button>
+    </section>
+
+    <!-- Classes Section -->
+    <section id="classes" class="section">
+        <h2>Our Classes</h2>
+        <div class="card">
+            <h3>Strength Training</h3>
+            <p>Build muscle, tone your body, and increase endurance</p>
+        </div>
+        <div class="card">
+            <h3>Cardio & HIIT</h3>
+            <p>Burn calories fast and improve heart health</p>
+        </div>
+        <div class="card">
+            <h3>Group Classes</h3>
+            <p>Motivation, teamwork, and fun in every session</p>
+        </div>
+    </section>
+
+    <!-- Membership Plans -->
+    <section id="membership" class="section">
+        <h2>Membership Plans</h2>
+        <div class="card">
+            <h3>Bronze Plan</h3>
+            <p>Access to all gym equipment</p>
+            <p>R250 / month</p>
+            <button class="button-primary">Join Now</button>
+        </div>
+        <div class="card">
+            <h3>Silver Plan</h3>
+            <p>All classes included</p>
+            <p>R350 / month</p>
+            <button class="button-primary">Join Now</button>
+        </div>
+        <div class="card">
+            <h3>Gold Plan</h3>
+            <p>All classes + personal trainer sessions</p>
+            <p>R500 / month</p>
+            <button class="button-primary">Join Now</button>
+        </div>
+    </section>
+
+    <!-- Trainers Section -->
+    <section id="trainers" class="section">
+        <h2>Meet Our Trainers</h2>
+        <div class="trainer-card card">
+            <img src="trainer1.jpg" alt="Trainer John Doe">
+            <h4>John Doe</h4>
+            <p>Strength & Conditioning Specialist</p>
+            <p>"Helping you achieve your fitness goals!"</p>
+        </div>
+        <div class="trainer-card card">
+            <img src="trainer2.jpg" alt="Trainer Jane Smith">
+            <h4>Jane Smith</h4>
+            <p>HIIT & Functional Training Expert</p>
+            <p>"Push limits, see results, stay motivated!"</p>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="section">
+        <h2>Success Stories</h2>
+        <blockquote>"FFIT Gym transformed my life – I’m stronger and healthier!" – Client Name</blockquote>
+        <blockquote>"Amazing trainers and classes. Highly recommend!" – Client Name</blockquote>
+    </section>
+
+    <!-- Booking Section -->
+    <section id="booking" class="section">
+        <h2>Book Your Class</h2>
+        <!-- Mobile-friendly Calendly Integration -->
+        <div class="calendly-inline-widget" data-url="https://calendly.com/ffit-gym" style="min-width:320px;height:600px;"></div>
+        <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <h2>Contact Us</h2>
+        <p style="text-align:center;">📞 +27 123 456 789 | ✉ info@ffit-gym.com</p>
+        <p style="text-align:center;">📍 Your Gym Location Here</p>
+    </section>
+
+</body>
+</html>
+!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
