@@ -1,115 +1,465 @@
-<!DOCTYPE html>
+<<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FFIT Gym</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Colors & Fonts */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #FAFAFA;
+            color: #333;
+        }
+
+        /* Navbar */
+        .navbar {
+            position: sticky;
+            top: 0;
+            background-color: #3F51B5;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            padding: 15px 0;
+            z-index: 1000;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .navbar a:hover {
+            color: #C0C0C0;
+        }
+
+        /* Sections */
+        .section {
+            padding: 80px 20px;
+        }
+
+        h2 {
+            color: #3F51B5;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        /* Buttons */
+        .button-primary {
+            background: linear-gradient(90deg, #3F51B5, #9C27B0);
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: bold;
+        }
+
+        .button-primary:hover {
+            background: #9C27B0;
+            transform: scale(1.05);
+        }
+
+        /* Cards */
+        .card {
+            border: 1px solid #C0C0C0;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            margin: 20px auto;
+            max-width: 300px;
+            background-color: white;
+        }
+
+        /* Trainer Cards */
+        .trainer-card img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        /* Testimonials */
+        blockquote {
+            font-style: italic;
+            background-color: #FAFAFA;
+            padding: 20px;
+            border-left: 5px solid #9C27B0;
+            max-width: 600px;
+            margin: 20px auto;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                gap: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <a href="#home">Home</a>
+        <a href="#classes">Classes</a>
+        <a href="#membership">Membership</a>
+        <a href="#trainers">Trainers</a>
+        <a href="#booking">Book Now</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="section" style="background: url('gym-hero.jpg') center/cover no-repeat; color: white; text-align: center;">
+        <h1 style="font-size: 48px;">Welcome to FFIT Gym</h1>
+        <p style="font-size: 20px;">Your journey to fitness, strength & wellness starts here</p>
+        <button class="button-primary">Join Today</button>
+    </section>
+
+    <!-- Classes Section -->
+    <section id="classes" class="section">
+        <h2>Our Classes</h2>
+        <div class="card">
+            <h3>Strength Training</h3>
+            <p>Build muscle, tone your body, and increase endurance</p>
+        </div>
+        <div class="card">
+            <h3>Cardio & HIIT</h3>
+            <p>Burn calories fast and improve heart health</p>
+        </div>
+        <div class="card">
+            <h3>Group Classes</h3>
+            <p>Motivation, teamwork, and fun in every session</p>
+        </div>
+    </section>
+
+    <!-- Membership Plans -->
+    <section id="membership" class="section">
+        <h2>Membership Plans</h2>
+        <div class="card">
+            <h3>Bronze Plan</h3>
+            <p>Access to all gym equipment</p>
+            <p>R250 / month</p>
+            <button class="button-primary">Join Now</button>
+        </div>
+        <div class="card">
+            <h3>Silver Plan</h3>
+            <p>All classes included</p>
+            <p>R350 / month</p>
+            <button class="button-primary">Join Now</button>
+        </div>
+        <div class="card">
+            <h3>Gold Plan</h3>
+            <p>All classes + personal trainer sessions</p>
+            <p>R500 / month</p>
+            <button class="button-primary">Join Now</button>
+        </div>
+    </section>
+
+    <!-- Trainers Section -->
+    <section id="trainers" class="section">
+        <h2>Meet Our Trainers</h2>
+        <div class="trainer-card card">
+            <img src="trainer1.jpg" alt="Trainer John Doe">
+            <h4>John Doe</h4>
+            <p>Strength & Conditioning Specialist</p>
+            <p>"Helping you achieve your fitness goals!"</p>
+        </div>
+        <div class="trainer-card card">
+            <img src="trainer2.jpg" alt="Trainer Jane Smith">
+            <h4>Jane Smith</h4>
+            <p>HIIT & Functional Training Expert</p>
+            <p>"Push limits, see results, stay motivated!"</p>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="section">
+        <h2>Success Stories</h2>
+        <blockquote>"FFIT Gym transformed my life – I’m stronger and healthier!" – Client Name</blockquote>
+        <blockquote>"Amazing trainers and classes. Highly recommend!" – Client Name</blockquote>
+    </section>
+
+    <!-- Booking Section -->
+    <section id="booking" class="section">
+        <h2>Book Your Class</h2>
+        <!-- Mobile-friendly Calendly Integration -->
+        <div class="calendly-inline-widget" data-url="https://calendly.com/ffit-gym" style="min-width:320px;height:600px;"></div>
+        <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <h2>Contact Us</h2>
+        <p style="text-align:center;">📞 +27 123 456 789 | ✉ info@ffit-gym.com</p>
+        <p style="text-align:center;">📍 Your Gym Location Here</p>
+    </section>
+
+</body>
+</html>
+!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>FFIT GYM | Book Your Session</title>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+<title>FFIT Gym</title>
 <style>
-    /* BASE STYLES */
-    body {
-        font-family: 'Roboto', sans-serif;
-        margin: 0;
-        padding: 0;
-        background: #fff;
-        color: #111;
-        scroll-behavior: smooth;
-    }
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,Helvetica,sans-serif;background:#0b0b0b;color:white}
+header{background:black;padding:20px;text-align:center;position:sticky;top:0;z-index:10}
+header h1{margin:0;font-size:32px;letter-spacing:3px}
+nav{display:flex;justify-content:center;gap:25px;margin-top:10px;flex-wrap:wrap}
+nav a{color:white;text-decoration:none;font-size:14px;opacity:.9}
+nav a:hover{opacity:1}
 
-    header {
-        background-color: #0d3b66; /* Deep blue */
-        color: #f4d35e; /* Gold */
-        padding: 25px 20px;
-        text-align: center;
-    }
+.hero{padding:90px 20px;text-align:center;background:linear-gradient(180deg,#111,#0b0b0b)}
+.hero h2{font-size:40px;margin-bottom:10px}
+.hero p{opacity:.8;max-width:600px;margin:auto}
 
-    header h1 {
-        margin: 0;
-        font-size: 2.5em;
-    }
+.btn{display:inline-block;margin-top:25px;padding:14px 30px;background:white;color:black;text-decoration:none;border-radius:6px;font-weight:bold}
 
-    header p {
-        margin: 5px 0 0;
-        font-size: 1.2em;
-    }
+.section{padding:60px 20px;text-align:center}
+.section h2{font-size:28px;margin-bottom:10px}
 
-    nav {
-        display: flex;
-        justify-content: center;
-        background: #fafafa;
-        border-bottom: 1px solid #ddd;
-    }
+.cards{display:flex;flex-wrap:wrap;gap:20px;justify-content:center;margin-top:35px}
 
-    nav a {
-        padding: 15px 25px;
-        font-weight: bold;
-        color: #0d3b66;
-        text-decoration: none;
-    }
+.card{background:#151515;padding:25px;border-radius:12px;width:260px;transition:.2s}
+.card:hover{transform:translateY(-5px)}
 
-    nav a:hover {
-        color: #f95738;
-    }
+.paybtn{background:#00a86b;color:white;padding:10px 15px;border-radius:6px;border:none;margin-top:10px;cursor:pointer}
+.bookbtn{background:#444;color:white;padding:10px 15px;border-radius:6px;border:none;margin-top:10px;cursor:pointer}
 
-    section {
-        padding: 60px 20px;
-        max-width: 800px;
-        margin: auto;
-    }
+.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px;margin-top:30px}
+.gallery img{width:100%;border-radius:8px;height:180px;object-fit:cover}
 
-    h2 {
-        text-align: center;
-        color: #0d3b66;
-        margin-bottom: 20px;
-    }
+.login{max-width:350px;margin:30px auto;text-align:left}
+.login input,.login button{width:100%;padding:12px;margin-bottom:10px;border-radius:6px;border:none}
+.login input{background:#1b1b1b;color:white}
+.login button{background:white;color:black;font-weight:bold}
 
-    form {
-        display: flex;
-        flex-direction: column;
-        gap: 15px;
-        background: #f4f4f4;
-        padding: 25px;
-        border-radius: 10px;
-        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    }
+.dashboard{max-width:700px;margin:auto;text-align:left;background:#111;padding:20px;border-radius:10px;margin-top:30px}
+.stat{margin:10px 0;padding:10px;background:#1a1a1a;border-radius:6px}
 
-    input, select, textarea, button {
-        padding: 12px 15px;
-        border-radius: 8px;
-        border: 1px solid #ddd;
-        font-size: 1em;
-        width: 100%;
-        box-sizing: border-box;
-    }
+footer{background:black;padding:25px;text-align:center;margin-top:50px;font-size:14px;opacity:.7}
 
-    textarea {
-        resize: vertical;
-        min-height: 80px;
-    }
+.whatsapp{position:fixed;bottom:20px;right:20px;background:#25D366;color:white;padding:15px 18px;border-radius:50px;font-weight:bold;text-decoration:none}
 
-    button {
-        background-color: #f95738;
-        color: #fff;
-        border: none;
-        cursor: pointer;
-        font-weight: bold;
-        transition: 0.3s;
-    }
+@media(max-width:700px){
+.hero h2{font-size:30px}
+.cards{flex-direction:column;align-items:center}
+}
+</style>
+</head>
+<body>
 
-    button:hover {
-        background-color: #f4d35e;
-        color: #0d3b66;
-    }
+<header>
+<h1>FFIT GYM</h1>
+<nav>
+<a href="#">Home</a>
+<a href="#services">Training</a>
+<a href="#membership">Membership</a>
+<a href="#login">Member Login</a>
+<a href="#classes">Classes</a>
+<a href="#trainers">Trainers</a>
+<a href="#gallery">Gym</a>
+<a href="#dashboard">Dashboard</a>
+<a href="#contact">Contact</a>
+</nav>
+</header>
 
-    footer {
-        text-align: center;
-        padding: 20px;
-        background: #0d3b66;
-        color: #f4d35e;
-        margin-top: 50px;
-    }
+<section class="hero">
+<h2>Discipline. Strength. Results.</h2>
+<p>Welcome to FFIT Gym. A focused training space built for people serious about improving strength, fitness and lifestyle.</p>
+<a class="btn" href="#membership">Start Training</a>
+</section>
 
-    @media(max-width:600px){
-        header h1 { font-size:2em; }
-        nav { flex-direction: column; }
-        nav a { padding:10px 0; }
+<section id="services" class="section">
+<h2>Training Options</h2>
+<div class="cards">
+<div class="card"><h3>Strength Training</h3><p>Free weights and squat rack training.</p></div>
+<div class="card"><h3>Cardio</h3><p>Improve endurance and burn fat.</p></div>
+<div class="card"><h3>Personal Training</h3><p>Professional coaching.</p></div>
+<div class="card"><h3>Group Training</h3><p>Motivating small classes.</p></div>
+</div>
+</section>
+
+<section id="membership" class="section">
+<h2>Membership Plans</h2>
+<p>Secure online payments using PayFast.</p>
+<div class="cards">
+
+<div class="card">
+<h3>Basic</h3>
+<p><strong>R250 / month</strong></p>
+<form action="https://www.payfast.co.za/eng/process" method="post">
+<input type="hidden" name="amount" value="250">
+<input type="hidden" name="item_name" value="FFIT Basic Membership">
+<button class="paybtn" type="submit">Pay with PayFast</button>
+</form>
+</div>
+
+<div class="card">
+<h3>Standard</h3>
+<p><strong>R350 / month</strong></p>
+<form action="https://www.payfast.co.za/eng/process" method="post">
+<input type="hidden" name="amount" value="350">
+<input type="hidden" name="item_name" value="FFIT Standard Membership">
+<button class="paybtn" type="submit">Pay with PayFast</button>
+</form>
+</div>
+
+<div class="card">
+<h3>Elite</h3>
+<p><strong>R500 / month</strong></p>
+<form action="https://www.payfast.co.za/eng/process" method="post">
+<input type="hidden" name="amount" value="500">
+<input type="hidden" name="item_name" value="FFIT Elite Membership">
+<button class="paybtn" type="submit">Pay with PayFast</button>
+</form>
+</div>
+
+</div>
+</section>
+
+<section id="login" class="section">
+<h2>Member Login</h2>
+<div class="login">
+<input id="email" placeholder="Email">
+<input id="pass" type="password" placeholder="Password">
+<button onclick="login()">Login</button>
+<p id="loginMsg"></p>
+</div>
+</section>
+
+<section id="classes" class="section">
+<h2>Class Booking</h2>
+<div class="cards">
+
+<div class="card">
+<h3>HIIT</h3>
+<p>Spots left: <span id="capHIIT">10</span></p>
+<button class="bookbtn" onclick="bookClass('HIIT')">Book</button>
+</div>
+
+<div class="card">
+<h3>Strength</h3>
+<p>Spots left: <span id="capStrength">10</span></p>
+<button class="bookbtn" onclick="bookClass('Strength')">Book</button>
+</div>
+
+<div class="card">
+<h3>Conditioning</h3>
+<p>Spots left: <span id="capConditioning">10</span></p>
+<button class="bookbtn" onclick="bookClass('Conditioning')">Book</button>
+</div>
+
+</div>
+
+<p id="bookMsg"></p>
+</section>
+
+<section id="trainers" class="section">
+<h2>Trainers</h2>
+<div class="cards">
+<div class="card"><h3>Head Coach</h3><p>Strength & Conditioning Specialist</p></div>
+<div class="card"><h3>Fitness Trainer</h3><p>Weight Loss & Functional Training</p></div>
+</div>
+</section>
+
+<section id="gallery" class="section">
+<h2>The Gym</h2>
+<div class="gallery">
+<img src="https://images.unsplash.com/photo-1558611848-73f7eb4001a1">
+<img src="https://images.unsplash.com/photo-1583454110551-21f2fa2afe61">
+<img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48">
+<img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438">
+</div>
+</section>
+
+<section id="dashboard" class="section">
+<h2>Owner Dashboard</h2>
+<div class="dashboard">
+<div class="stat">Total Bookings: <span id="totalBookings">0</span></div>
+<div class="stat">HIIT Bookings: <span id="dHIIT">0</span></div>
+<div class="stat">Strength Bookings: <span id="dStrength">0</span></div>
+<div class="stat">Conditioning Bookings: <span id="dConditioning">0</span></div>
+<button class="bookbtn" onclick="resetStats()">Reset Stats</button>
+</div>
+</section>
+
+<section id="contact" class="section">
+<h2>Contact FFIT</h2>
+<p><strong>Phone:</strong> 078 778 3659</p>
+<p><strong>Business WhatsApp:</strong> <a style="color:#25D366" href="https://wa.me/27787783659" target="_blank">Message Us</a></p>
+<p>Email: <a style="color:white" href="mailto:info@ffitgym.com">info@ffitgym.com</a></p>
+
+<h3 style="margin-top:25px">Find FFIT on Google</h3>
+<a class="btn" href="https://www.google.com/search?q=FFIT+Gym" target="_blank">Search FFIT on Google</a>
+</section>
+
+<footer>
+<p>© 2026 FFIT Gym | Train Hard Stay Fit</p>
+<p>WhatsApp: 078 778 3659</p>
+</footer>
+
+<a class="whatsapp" href="https://wa.me/27787783659" target="_blank">WhatsApp</a>
+
+<script>
+
+let capacity={HIIT:10,Strength:10,Conditioning:10}
+let bookings={HIIT:0,Strength:0,Conditioning:0}
+
+function login(){
+let email=document.getElementById('email').value
+let pass=document.getElementById('pass').value
+if(email && pass){
+document.getElementById('loginMsg').innerText='Login successful (demo).'
+}else{
+document.getElementById('loginMsg').innerText='Enter login details.'
+}
+}
+
+function updateDisplay(){
+document.getElementById('capHIIT').innerText=capacity.HIIT
+
+document.getElementById('capStrength').innerText=capacity.Strength
+
+document.getElementById('capConditioning').innerText=capacity.Conditioning
+
+let total=bookings.HIIT+bookings.Strength+bookings.Conditioning
+
+document.getElementById('totalBookings').innerText=total
+
+document.getElementById('dHIIT').innerText=bookings.HIIT
+
+document.getElementById('dStrength').innerText=bookings.Strength
+
+document.getElementById('dConditioning').innerText=bookings.Conditioning
+}
+
+function bookClass(name){
+if(capacity[name]>0){
+capacity[name]--
+bookings[name]++
+updateDisplay()
+document.getElementById('bookMsg').innerText='Booked '+name
+}else{
+document.getElementById('bookMsg').innerText='Class Full'
+}
+}
+
+function resetStats(){
+capacity={HIIT:10,Strength:10,Conditioning:10}
+bookings={HIIT:0,Strength:0,Conditioning:0}
+updateDisplay()
+}
+
+updateDisplay()
+
+</script>
+
+</body>
+</html>
